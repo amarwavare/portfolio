@@ -1,0 +1,288 @@
+@import "./variables.module.scss";
+@import "./fonts.module.scss";
+
+.commonTransparentHeader, .commonBlurHeader {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 5% 0% 5%;
+  width: 90%;
+  height: fit-content;
+}
+
+.commonTransparentHeader {
+  background-color: transparent;
+  transform: translateY(0);
+  transition: transform 0.6s ease;
+}
+.commonBlurHeader {
+  // z-index: 10;
+  transform: translateY(10);
+  transition: transform 0.6s ease;
+  // background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(20px);
+  // box-shadow:inset 0 0 0 50vw rgba(255, 255, 255, 0)
+}
+
+.commonWrapperBody {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: $primaryBackground;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background: rgb(0, 0, 0) !important;
+    background: linear-gradient(
+      356deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(22, 24, 27, 1) 32%,
+      rgba(49, 54, 57, 1) 100%
+    ) !important;
+    background: -webkit-linear-gradient(
+      (
+          356deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(22, 24, 27, 1) 32%,
+          rgba(49, 54, 57, 1) 100%
+        )
+        !important
+    );
+    background: -moz-linear-gradient(
+      (
+          356deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(22, 24, 27, 1) 32%,
+          rgba(49, 54, 57, 1) 100%
+        )
+        !important
+    );
+    background: -ms-linear-gradient(
+      (
+          356deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(22, 24, 27, 1) 32%,
+          rgba(49, 54, 57, 1) 100%
+        )
+        !important
+    );
+    background: -o-linear-gradient(
+      (
+          356deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(22, 24, 27, 1) 32%,
+          rgba(49, 54, 57, 1) 100%
+        )
+        !important
+    );
+    background-attachment: fixed;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.commonChildComponents {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 5% 0% 5%;
+}
+
+.commonTitleName {
+  // font-family: 'Segoe UI', Tahoma;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-stretch: expanded;
+  letter-spacing: 4px;
+}
+
+.commonHeaderMenuIcon {
+  z-index: 10;
+  color: $portfolioGrey2;
+}
+
+.commonHeaderSocialIcons {
+  margin-right: 100px;
+}
+
+.commonHeaderSocialIcon {
+  margin-right: 10px;
+  color: $portfolioGrey2;
+}
+
+.commonMenuButtons {
+  letter-spacing: 0;
+}
+
+.commonMenuButtons {
+  background: rgba($white, 0);
+  color: white;
+  padding: .25em;
+  text-align: center;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: large;
+  width: 100%; 
+  
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+  
+  @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+    
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+.commonMenuButtons:hover,
+.commonMenuButtons:active {
+letter-spacing: 2px;
+}
+
+.commonMenuButtons:after,
+.commonMenuButtons:before {
+backface-visibility: hidden;
+border: 1px solid rgba($white, 0);
+bottom: 0px;
+content: " ";
+display: block;
+margin: 0 auto;
+position: relative;
+transition: all 280ms ease-in-out;
+width: 0;
+}
+
+.commonMenuButtons:hover:after,
+.commonMenuButtons:hover:before {
+backface-visibility: hidden;
+border-color: $white;
+transition: width 350ms ease-in-out;
+width: 70%;
+transition: 0.5s ease-in-out;
+}
+
+.commonMenuButtons:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+  transition: 0.5s ease-in-out;
+}
+
+.leftContent {
+  position: fixed;
+  margin-top: 200px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftNumber {
+  font-size: 100px;
+  color: $portfolioGrey;
+  font-weight: 900;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.leftVerticleLine {
+  height: 100px;
+  width: 2px;
+  border-radius: 100%;
+  color: $portfolioGrey;
+  background-color: $portfolioGrey;
+}
+
+.leftTitleVerticle {
+  transform: rotate(-90deg);
+  color: $portfolioGrey;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 6px;
+}
+
+.rightContent {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 300px;
+  right: 0;
+  margin-right: 5%;
+}
+
+.rightContentLarge, .rightContentSmall {
+  margin: 25px 0px;
+  height: 3px;
+  background: $portfolioGrey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rightContentSmall {
+  width: 10px;
+}
+
+.rightContentLarge {
+  width: 25px;
+  background: $white;
+}
+
+.commonContentWrapRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.commonBodyWrap {
+  width: 100ch;
+  margin-top: 200px;
+  margin-left: 300px;
+  margin-right: 300px;;
+}
+
+.commonMoreAction {
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: 0.25s ease background;
+  &:hover {
+    background: #1d1d1d60;
+  }
+}
+
+.mainMenuDrawer {
+  z-index: 1;
+  backdrop-filter: blur(15px);
+}

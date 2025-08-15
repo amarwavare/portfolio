@@ -1,0 +1,70 @@
+@import "./fonts.module.scss";
+@import "./variables.module.scss";
+
+.journeyDividerWrapper {
+    display: flex;
+    justify-content: center;
+}
+.journeyDivider {
+    color: $portfolioGrey;
+    width: 25ch;
+}
+.journeyDivider::before, .journeyDivider::after {
+    border: thin solid $portfolioGrey;
+    border-bottom: none;
+}
+
+.journeyDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    font-weight: 300;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.journeyText, .journeyText1 {
+    margin-top: 6px;
+}
+
+.journeyText1 {
+    margin-bottom: 6px;
+}
+
+.journeyTimeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.timelineContent {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: 0.5s ease-in-out;
+    cursor: default;
+    &:hover {
+        transition: 0.5s ease-in-out;
+        border-radius: 20px;
+        box-shadow: 0px 7px 18px -9px rgba(0,0,0,0.36);
+        -webkit-box-shadow: 0px 7px 18px -9px rgba(0,0,0,0.36);
+        -moz-box-shadow: 0px 7px 18px -9px rgba(0,0,0,0.36);
+    }
+}
+
+.journeyDescriptionText, .journeyDescriptionTitle, .journeyDescriptionAs {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: large;
+    font-weight: 100;
+}
+
+.journeyDescriptionTitle {
+    cursor: pointer;
+    font-weight: 200;
+    font-size: x-large;
+}
+
+.journeyDescriptionAs {
+    font-weight: 400;
+    font-style: italic;
+}

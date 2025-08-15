@@ -13,8 +13,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@styles/*": ["./src/branding/scss/*"],
+    },
+    // "noImplicitAny": false,
+    "typeRoots": [
+      "../node_modules/@types",
+      "../@types"
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

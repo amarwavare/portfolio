@@ -1,0 +1,31 @@
+@import "./variables.module.scss";
+@import "./fonts.module.scss";
+
+.introductionWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.introductionHello {
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.introductionHorizontalDivider {
+    width: 100px;
+    height: 1px;
+    background-color: gray;
+    color: gray;
+}
+
+.introductionParagraph {
+    color: $portfolioGrey3;
+    font-size: larger;
+    // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Baskervville', serif;
+    letter-spacing: 1px;
+    font-weight: 10;
+    text-align-last: left;
+    margin: 7px 0px;
+    font-weight: 100;
+}
